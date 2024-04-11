@@ -1,13 +1,24 @@
-.form {
+import styled from 'styled-components'
+
+export const FormularioVagas = styled.form`
   display: grid;
   grid-template-columns: 1fr auto;
   background-color: var(--cor-secundaria);
   padding: 32px;
   border-radius: 12px;
   margin-top: 40px;
+`
+
+type CampoVagasProps = {
+  placeholder?: string
 }
 
-.btnPesquisar {
+export const CampoVagas = styled.input<CampoVagasProps>`
+  padding: 0 16px;
+  outline-color: var(--cor-principal);
+`
+
+export const BotaoPesquisarVagas = styled.button`
   background-color: var(--cor-principal);
   border: 1px solid var(--cor-principal);
   height: 40px;
@@ -16,9 +27,4 @@
   color: var(--cor-secundaria);
   margin-left: 8px;
   cursor: pointer;
-}
-
-.campo {
-  padding: 0 16px;
-  outline-color: var(--cor-principal);
-}
+`
