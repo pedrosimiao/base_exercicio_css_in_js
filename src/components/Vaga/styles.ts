@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 
+interface LinkDetalhesVagaProps {
+  href?: string | undefined
+  children?: React.ReactNode
+}
+
 export const CardVaga = styled.li`
   border: 1px solid var(--cor-principal)};
   background-color: var(--cor-secundaria);
@@ -28,7 +33,7 @@ export const TituloVaga = styled.h3`
   margin-bottom: 16px;
 `
 
-export const LinkDetalhesVaga = styled.a`
+export const LinkDetalhesVaga = styled.a<LinkDetalhesVagaProps>`
   border-color: var(--cor-secundaria);
   background-color: var(--cor-principal);
   color: var(--cor-secundaria);
